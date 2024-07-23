@@ -1,0 +1,411 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+header {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  height: 9vh;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.leftImageLogoDiv {
+  display: flex;
+  align-items: center;
+}
+
+.centerHeaderDiv {
+  display: flex;
+  align-items: center;
+}
+
+.centerHeaderDiv ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 2vw;
+  align-items: center;
+}
+.centerHeaderDiv ul li {
+  font-size: 1.5vw;
+  cursor: pointer;
+}
+
+.rightHeaderDiv {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.rightHeaderDiv button {
+  height: 2.5rem;
+  width: 6rem;
+  border-style: none;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.rightHeaderDiv button:hover {
+  transform: scale(1.2);
+}
+
+.signUpButton {
+  background-color: #8854c0;
+  color: #efe5ff;
+}
+
+.login {
+  background-color: #efe5ff;
+  color: #5d2057;
+}
+.renderLandingDiv {
+  background-color: #5f1757;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  height: auto;
+}
+
+.wrapperDetail {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 3rem;
+}
+
+.wrapperDetail h1 {
+  margin-top: 1rem;
+  color: white;
+  text-align: center;
+  font-family: Poppins, sans-serif;
+  font-size: 4.2rem;    
+}
+.makeText {
+  width: 70%;
+  text-align: center;
+  font-size: 2rem;
+  color: rgb(229, 221, 221);
+}
+.createBtn {
+  height: 4rem;
+  width: 13rem;
+  border-style: none;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: #5d2057;
+  box-shadow: 5px 5px #d6d6d6;
+}
+.createBtn:hover { 
+  margin-top: 1px;
+  box-shadow: none;
+  transition: all .3s ease-in-out; 
+}
+.usedBy {
+  margin-left: 22px;
+  font-size: 2rem;
+  display: flex;
+  gap: 2vw;
+  color: #efe5ff;
+}
+.usedBy i {
+  color: #8854C0;
+}
+.QuizMaker {
+  color: yellow;
+}
+
+.QuizMaker {
+  font-family: "Bungee Spice", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.wrapperDetail {
+  position: relative;
+}
+
+.QuizMakerDiv {
+  width: 80%;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+  position: relative;
+}
+
+#inputTypeQuiz {
+  width: 100%;
+  height: 7vh;
+  margin-top: 5vh;
+  font-size: 1.2rem;
+  padding-left: 1vw;
+  box-shadow: rgba(105, 229, 231, 0.25) 0px 30px 60px -12px inset, rgba(136, 36, 36, 0.3) 0px 18px 36px -18px inset;
+  border-style: none;
+  border-radius: .5rem;
+}
+
+#addQuestionBtn, #saveBtn, #newQuizBtn, #previewBtn {
+  height: 2rem;
+  width: 10rem;
+  border-style: none;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  border-radius: 0.2rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-style: normal;
+  color: #f3afec;
+  background-color: #8854c0;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.previewBtnHide{
+  display: none;
+}
+.questionInput {
+  width: 100%;
+  height: 5vh;
+  margin-top: 4vh;
+  padding-left: 1vw;
+  margin-bottom: 2vh;
+}
+.QuestionInputDiv {
+  background-color: #d6d6d6;
+  padding: 1vh;
+  margin-top: 1vh;
+  border-radius: 1rem;
+}
+
+.optionsDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1vh;
+  padding: 1vh;
+}
+
+#saveBtn, #newQuizBtn {
+  background-color: antiquewhite;
+  color: #5d2057;
+}
+
+#previewBtn {
+  background-color: greenyellow;
+  color: black;
+}
+
+.optionInput {
+  height: 5.5vh;
+  width: 20vw;  
+}
+
+.optionInput {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #555;
+  outline: none;
+}
+
+.optionInput:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+
+.questionInput{
+  margin-top: 5vh;
+  font-size: 1rem;
+  padding-left: 1vw;
+  box-shadow: rgba(56, 59, 130, 0.461) 0px 30px 60px -12px inset, rgba(136, 36, 36, 0.3) 0px 18px 36px -18px inset;
+  border-style: none;
+  border-radius: .5rem;
+}
+
+.questionNoSpan{
+  font-size: 1rem;
+  font-style: none;
+}
+.containerHeading{
+  background: #ffffffce;
+  height: 10vw;
+  width: 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2vw;
+  border-radius: 20%;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  cursor: pointer;
+  font-family: "Kode Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  position: relative;
+}
+
+.containerHeading:hover{
+  transform: scale(1.2);
+}
+
+.wrapperTitle{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.deleteBtn{
+  border-style: none;
+  background-color:transparent;
+  position: absolute;
+  top: 1vh;
+  right: 1vw;
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+.cross {
+  background-color: transparent;
+  border-style: none;
+  position: absolute;
+  right: 1vw;
+
+}
+.cross:hover{
+  transform: scale(1.5);
+  cursor: pointer;
+}
+
+.playNowButton{
+  position: absolute;
+  top: 2vh;
+  right: 2.10vw;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: none;
+  color: #fff;
+  background: linear-gradient(180deg, #4B91F7 0%, #367AF6 100%);
+  
+}
+
+
+.submit{
+  position: absolute;
+  bottom: 3vh;
+  right: 2.10vw;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: none;
+  color: #000000;
+  font-size: 1rem;
+  background: linear-gradient(180deg, #4bf770 0%, #619f43 100%);
+}
+
+.playNowButton:focus{
+  transform: scale(1.1);
+}
+
+.optionsDiv div{
+  display: flex;
+}
+
+.questionDiv{
+  position: relative;
+}
+
+
+.input {
+  -webkit-appearance: none;
+ /* remove default */
+  display: block;
+  margin: 10px;
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  cursor: pointer;
+  
+  box-shadow: hsla(0,0%,100%,.15) 0 1px 1px, inset hsla(0,0%,0%,.5) 0 0 0 1px;
+  background-color: hsla(0,0%,0%,.2);
+  background-image: -webkit-radial-gradient( hsla(200,100%,90%,1) 0%, hsla(200,100%,70%,1) 15%, hsla(200,100%,60%,.3) 28%, hsla(200,100%,30%,0) 70% );
+  background-repeat: no-repeat;
+  -webkit-transition: background-position .15s cubic-bezier(.8, 0, 1, 1),
+    -webkit-transform .25s cubic-bezier(.8, 0, 1, 1);
+  outline: none;
+}
+
+
+
+
+.input,
+.input:active {
+  background-position: 0 24px;
+}
+
+.input:checked {
+  background-position: 0 0;
+}
+
+.input:checked ~ .input,
+.input:checked ~ .input:active {
+  background-position: 0 -24px;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  body {
+    
+  }
+.login{
+  display: none;
+}
+.signUpButton{
+  display: none;
+}
+.wrapperTitle{
+  display: flex;
+  flex-wrap:wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.containerHeading{
+  height: 15vh;
+  width: 15vh;
+  font-size: 2vh;
+}
+.submit{
+  margin-right: 3vw;
+}
+}
