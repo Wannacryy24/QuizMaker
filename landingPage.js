@@ -1,5 +1,6 @@
 import { createQuizClicked, check } from "./createQuiz.js";
-import { showAllTemplates } from "./previewQuiz.js";
+import { showAllTemplates , showSavedTemplates } from "./previewQuiz.js";
+import {interviewQuiz} from './previouslyLoadedQuizes.js'
 export function landingFrontPage() {
   var headerContent = `
   <header>
@@ -9,9 +10,9 @@ export function landingFrontPage() {
     <div class="centerHeaderDiv">
       <ul>
         <li class='home'>Home</class=></li>
-        <li class='template'>Templates</li>
+        <li class='template'>My Quizes</li>
+        <li class='defaultQuizes'>Templates</li>
         <li>About</li>
-        <li>Contact Us</li>
       </ul>
     </div>
     <div class="rightHeaderDiv">
@@ -40,4 +41,8 @@ export function renderFirstPageDetail() {
   document.querySelector(".template").addEventListener("click",showAllTemplates);
 
   document.querySelector(".home").addEventListener("click",function(){location.reload()});
+
+  document.querySelector(".defaultQuizes").addEventListener("click",showSavedTemplates(interviewQuiz));
+
+
 }

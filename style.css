@@ -32,7 +32,7 @@ header {
   align-items: center;
 }
 .centerHeaderDiv ul li {
-  font-size: 1.5vw;
+  font-size: 2vw;
   cursor: pointer;
 }
 
@@ -384,14 +384,20 @@ header {
 
 
 @media only screen and (max-width: 600px) {
-  body {
-    
-  }
 .login{
   display: none;
 }
+.leftImageLogoDiv img{
+  width: 25vw;
+}
 .signUpButton{
   display: none;
+}
+.centerHeaderDiv ul li {
+  font-size: 4vw;
+  cursor: pointer;
+  font-weight: 900;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
 }
 .wrapperTitle{
   display: flex;
@@ -407,5 +413,36 @@ header {
 }
 .submit{
   margin-right: 3vw;
+}
+#inputTypeQuiz{
+  font-size: smaller;
+  height: 2rem;
+  margin-top: 10px;
+}
+.QuizMakerDiv h2{
+  font-size: small;
+  display: flex;
+  justify-content: center;
+}
+#addQuestionBtn, #saveBtn, #newQuizBtn, #previewBtn{
+  height: 1.5rem;
+  width: 6rem;
+  font-size: 10px;
+  
+}
+.optionInput{
+  width: 80%;
+}
+.questionInput{
+  height: 1.8rem;
+}
+.optionRadio{
+  height: auto;
+  width: 15px;
+}
+.containerHeading{
+  width: 50vw;
+  height: 25vw;
+  border-radius: 0px;
 }
 }

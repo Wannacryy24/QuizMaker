@@ -18,7 +18,6 @@ export function previewQuiz(ind) {
     if (wrapperDetail) {
         wrapperDetail.remove();
     }
-
     div.innerHTML = `<div>
                         <button class='playNowButton'>Attempt Test</button>
                         <div class='renderQuestion'>
@@ -88,4 +87,11 @@ function deleteQuiz(index) {
     savedQuizzes.splice(index, 1);
     localStorage.setItem('savedQuizzes', JSON.stringify(savedQuizzes));
     showAllTemplates();
+}
+
+
+
+
+export function showSavedTemplates(){
+       
 }
