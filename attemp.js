@@ -40,7 +40,19 @@ export function attemp(quizData){
                 score++;
             }
         });
-        swal(`Your score is ${score}/${quizData.questionsArray.length}`);
-        setTimeout(()=>navigate('/templates'),2000);
+        // swal(`Your score is ${score}/${quizData.questionsArray.length}`);
+        // setTimeout(()=>navigate('/templates'),2000);
+        document.querySelector('.QuizMakerDiv').remove();
+        var showScore = document.createElement('div');
+        document.querySelector('.renderLandingDiv').appendChild(showScore);
+        showScore.classList.add('QuizMakerDiv');
+        showScore.classList.add('showScore');
+        showScore.innerHTML+=`
+                                <div class='outer-score-div animate__backInDown'>
+                                    <div class='inner-Score-Div animate__backInDown'>
+                                        <p>Your Score is : ${score}/${quizData.questionsArray.length}</p>
+                                    </div>
+                                </div>
+                              `
     });
 }

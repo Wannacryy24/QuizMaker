@@ -127,6 +127,7 @@ header {
   color: #5d2057;
   box-shadow: 5px 5px #d6d6d6;
 }
+
 .createBtn:hover { 
   margin-top: 1px;
   box-shadow: none;
@@ -188,12 +189,16 @@ header {
   font-size: 1.2rem;
   font-weight: 400;
   font-style: normal;
-  color: #f3afec;
-  background-color: #8854c0;
+  background-color: #6200ea; /* Deep Purple */
+  color: #fff;
   margin-top: 1vh;
   margin-bottom: 1vh;
   box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
+#addQuestionBtn:hover{
+  background-color: #3700b3;
+}
+
 .previewBtnHide{
   display: none;
 }
@@ -299,6 +304,9 @@ header {
   top: 1vh;
   right: 1vw;
 }
+.deleteBtn:hover{
+
+}
 
 
 .material-symbols-outlined {
@@ -352,9 +360,7 @@ header {
   background: #056bfa27;
   border-radius: 20px;
   cursor: pointer;
-}
 
-.submit {
   margin-top: 1px;
   font-size: 19px;
   line-height: 22px;
@@ -414,7 +420,38 @@ header {
 }
 
 
+.showScore{
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
 
+.outer-score-div{
+height: 18vw;
+background-color: #5F1757;
+width: 18vw;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 50%;
+}
+.inner-Score-Div{
+  height: 15vw;
+  background-color: #8854C0;
+  width: 15vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: white;
+  font-size: larger;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.animate__backInDown{
+  animation: ; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; 
+}
 @media only screen and (max-width: 600px) {
 .login{
   display: none;
@@ -445,11 +482,15 @@ header {
 }
 .submit{
   margin-right: 3vw;
+
 }
 #inputTypeQuiz{
   font-size: smaller;
   height: 2rem;
   margin-top: 10px;
+}
+.QuizMakerDiv{
+  padding-bottom: 10vh;
 }
 .QuizMakerDiv h2{
   font-size: small;
@@ -488,5 +529,34 @@ header {
   display: flex;
   flex-direction: column;
   gap: 6vh
+}
+.playNowButton{
+  margin-top: 4vh;
+  width: 28vw;
+}
+.renderQuestion{
+  margin-top: -1vh;
+  padding-bottom: 2vh;
+}
+
+.showScore{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.outer-score-div{
+  height: 20vh;
+  width: 20vh;
+  margin-top: 6vh;
+}
+.inner-Score-Div p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inner-Score-Div {
+  height: 15vh;
+  width: 15vh;
+  font-size: x-small;
 }
 }
