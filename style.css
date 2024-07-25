@@ -164,6 +164,7 @@ header {
   margin-top: 2rem;
   position: relative;
   height: auto;
+  padding-bottom: 4%;
 }
 
 #inputTypeQuiz {
@@ -336,8 +337,7 @@ header {
 
 .submit{
   position: absolute;
-  bottom: 3vh;
-  right: 3vw;
+  bottom:2vh;
 }
 
 .submit {

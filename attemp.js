@@ -1,3 +1,5 @@
+import { navigate } from "./router";
+
 export function attemp(quizData){
     console.log(quizData);
     var QuizMakerDiv = document.querySelector('.QuizMakerDiv');
@@ -39,5 +41,6 @@ export function attemp(quizData){
             }
         });
         swal(`Your score is ${score}/${quizData.questionsArray.length}`);
+        setTimeout(()=>navigate('/templates'),2000);
     });
 }

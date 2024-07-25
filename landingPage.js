@@ -26,7 +26,7 @@ export function landingFrontPage() {
                 <p class='makeText'>Make a quiz with different question types to engage students in a classroom, train employees at work, or play trivia with friends.</p>
                 <div class='buttonQuizes'>
                     <button class="createBtn">Create a quiz<i class="fa-solid fa-angle-right"></i></button>
-                    <button class="createBtn">Preview Quizes<i class="fa-solid fa-angle-right"></i></button>
+                    <button class="createBtn" id='previewQuiz'>Preview Quizes<i class="fa-solid fa-angle-right"></i></button>
                 </div>
                 <p class='usedBy'><i class="fa-solid fa-check"></i>Can be used by people around the world.</p>
             </div>
@@ -35,5 +35,7 @@ export function landingFrontPage() {
 
     document.querySelector(".createBtn").addEventListener("click", () => navigate('/create'));
     document.querySelector(".template").addEventListener("click", () => navigate('/templates'));
+    document.querySelector("#previewQuiz").addEventListener("click", () => navigate('/templates'));
     document.querySelector(".home").addEventListener("click", () => navigate('/'));
+    
 }
