@@ -1,11 +1,9 @@
 import './style.css'
-import { landingFrontPage, renderFirstPageDetail } from './landingPage.js';
-
+import { interviewQuiz } from './previouslyLoadedQuizes.js';
+import { router } from './router.js';
 
 function initializeApp() {
-    // Rendering the landing page content header
-    landingFrontPage();
-    // Rendering the landing page content details 
-    renderFirstPageDetail();
+    interviewQuiz();//to load items of default savedQuizes 
+    router();
 }
 document.addEventListener('DOMContentLoaded', initializeApp);

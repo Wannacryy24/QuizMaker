@@ -32,8 +32,10 @@ header {
   align-items: center;
 }
 .centerHeaderDiv ul li {
-  font-size: 2vw;
+  font-size: 1.5vw;
   cursor: pointer;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 100;
 }
 
 .rightHeaderDiv {
@@ -55,9 +57,17 @@ header {
   font-weight: 400;
   font-style: normal;
 }
+
 .rightHeaderDiv button:hover {
   transform: scale(1.2);
 }
+
+.buttonQuizes{
+  display: flex;
+  gap: 10%;
+}
+
+
 
 .signUpButton {
   background-color: #8854c0;
@@ -75,6 +85,7 @@ header {
   justify-content: center;
   padding-top: 2rem;
   padding-bottom: 2rem;
+  min-height: 91vh;
   height: auto;
 }
 
@@ -86,6 +97,7 @@ header {
   margin-left: auto;
   margin-right: auto;
   gap: 3rem;
+  height: auto;
 }
 
 .wrapperDetail h1 {
@@ -151,6 +163,7 @@ header {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin-top: 2rem;
   position: relative;
+  height: auto;
 }
 
 #inputTypeQuiz {
@@ -248,6 +261,7 @@ header {
   font-size: 1rem;
   font-style: none;
 }
+
 .containerHeading{
   background: #ffffffce;
   height: 10vw;
@@ -256,7 +270,7 @@ header {
   justify-content: center;
   align-items: center;
   font-size: 1.2vw;
-  border-radius: 20%;
+  border-radius: 10%;
   box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
   cursor: pointer;
   font-family: "Kode Mono", monospace;
@@ -293,6 +307,7 @@ header {
   'GRAD' 0,
   'opsz' 24
 }
+
 .cross {
   background-color: transparent;
   border-style: none;
@@ -322,15 +337,32 @@ header {
 .submit{
   position: absolute;
   bottom: 3vh;
-  right: 2.10vw;
-  align-items: center;
-  padding: 6px 14px;
-  border-radius: 6px;
-  border: none;
-  color: #000000;
-  font-size: 1rem;
-  background: linear-gradient(180deg, #4bf770 0%, #619f43 100%);
+  right: 3vw;
 }
+
+.submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 12px 8px 16px;
+  gap: 8px;
+  height: 35px;
+  width: 100px;
+  border: none;
+  background: #056bfa27;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.submit {
+  margin-top: 1px;
+  font-size: 19px;
+  line-height: 22px;
+  color: #056DFA;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+}
+
 
 .playNowButton:focus{
   transform: scale(1.1);
@@ -394,10 +426,10 @@ header {
   display: none;
 }
 .centerHeaderDiv ul li {
-  font-size: 4vw;
+  font-size: 3.5vw;
   cursor: pointer;
   font-weight: 900;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .wrapperTitle{
   display: flex;
@@ -421,8 +453,6 @@ header {
 }
 .QuizMakerDiv h2{
   font-size: small;
-  display: flex;
-  justify-content: center;
 }
 #addQuestionBtn, #saveBtn, #newQuizBtn, #previewBtn{
   height: 1.5rem;
@@ -432,17 +462,31 @@ header {
 }
 .optionInput{
   width: 80%;
+  height: 70%;
 }
 .questionInput{
   height: 1.8rem;
+  font-size: smaller;
+  margin-top: 20px;
 }
 .optionRadio{
-  height: auto;
+  height: 15px;
   width: 15px;
 }
 .containerHeading{
   width: 50vw;
   height: 25vw;
   border-radius: 0px;
+}
+.questionDiv{
+  
+}
+.questionInput{
+
+}
+.buttonQuizes{
+  display: flex;
+  flex-direction: column;
+  gap: 6vh
 }
 }

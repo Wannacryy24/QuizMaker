@@ -5,7 +5,6 @@ export function attemp(quizData){
         <div class="renderQuestion">
             <h3>${quizData.heading}</h3>
         </div>`;
-
     quizData.questionsArray.forEach(function(question, index) {
         var questionHTML = `
             <div class='QuestionInputDiv'>
@@ -25,7 +24,9 @@ export function attemp(quizData){
         questionHTML += `</div></div>`;
         QuizMakerDiv.innerHTML += questionHTML;
     });    
-    QuizMakerDiv.innerHTML += `<button class='submit'>Submit</button>`;
+    QuizMakerDiv.innerHTML += `<button class="submit">
+  <span class="lable">Submit</span>
+</button>`;
 
     document.querySelector('.submit').addEventListener('click', function() {
         let score = 0;

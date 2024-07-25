@@ -1,9 +1,33 @@
 import { previewQuiz } from "./previewQuiz.js";
-
+import { navigate } from "./router.js";
 export function createQuizClicked() {
     var renderLandingDiv = document.querySelector('.renderLandingDiv');
-    renderLandingDiv.classList.add('renderLandingDiv2');
     
+    if(!renderLandingDiv){
+        document.querySelector('#App').innerHTML = `<header>
+            <div class="leftImageLogoDiv">
+                <img src="https://cdn.prod.website-files.com/60aca2b71ab9a5e4ececf1cf/62fa6419161d3a641f681ceb_Logo.svg" alt="Quizizz Logo" class="logo-image">
+            </div>
+            <div class="centerHeaderDiv">
+                <ul>
+                    <li class='home'>Home</li>
+                    <li class='template'>Templates</li>
+                    <li class='defaultQuizes'>About</li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
+            <div class="rightHeaderDiv">
+                <button class='login'>Login</button>
+                <button class='signUpButton'>Sign Up</button>
+            </div>
+        </header>
+        <div class='renderLandingDiv'>
+            <div class="wrapperDetail"></div>
+        </div>`;
+    }
+    
+    var renderLandingDiv = document.querySelector('.renderLandingDiv');
+    renderLandingDiv.classList.add('renderLandingDiv2');
     var wrapperDiv = document.querySelector(".wrapperDetail");
     wrapperDiv.innerHTML = "";
     wrapperDiv.innerHTML += `
@@ -29,7 +53,16 @@ export function createQuizClicked() {
     saveBtn.addEventListener('click', function() {
         check();
     });
+
+
+    var newQuizBtn = document.getElementById('newQuizBtn');
+    newQuizBtn.addEventListener('click', resetHtml);
+
+
+    document.querySelector(".template").addEventListener("click", () => navigate('/templates'));
+    document.querySelector(".home").addEventListener("click", () => navigate('/'));
 }
+
 
 
 function renderQuestions() {
@@ -162,4 +195,13 @@ function saveToJsonObject() {
     previewQuizBtn.addEventListener("click", function() {
         previewQuiz();
     });
+}
+
+
+function resetHtml() {
+    document.getElementById('inputTypeQuiz').value = '';
+    document.getElementById('questionsContainer').innerHTML = '';
+    document.querySelectorAll('.optionInput').forEach(input => input.value = '');
+    document.querySelectorAll('.optionRadio').forEach(radio => radio.checked = false);
+    document.querySelectorAll('.QuestionInputDiv').forEach(div => div.remove());
 }
