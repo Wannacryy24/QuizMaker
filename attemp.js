@@ -34,25 +34,28 @@ export function attemp(quizData){
         let score = 0;
         quizData.questionsArray.forEach(function(question, index) {
             let selectedOption = document.querySelector(`input[name='question${index}']:checked`);
-            //agar koi option select kia hai to 
-            //agar selectOption hai aur selectOption.value ki value barabar hai question ke correct Answer ke
+            // If an option is selected and the selected option value is equal to the correct answer
             if (selectedOption && selectedOption.value == question.correctAnswer) {
                 score++;
             }
         });
-        // swal(`Your score is ${score}/${quizData.questionsArray.length}`);
-        // setTimeout(()=>navigate('/templates'),2000);
         document.querySelector('.QuizMakerDiv').remove();
         var showScore = document.createElement('div');
         document.querySelector('.renderLandingDiv').appendChild(showScore);
         showScore.classList.add('QuizMakerDiv');
         showScore.classList.add('showScore');
-        showScore.innerHTML+=`
-                                <div class='outer-score-div animate__backInDown'>
-                                    <div class='inner-Score-Div animate__backInDown'>
-                                        <p>Your Score is : ${score}/${quizData.questionsArray.length}</p>
-                                    </div>
-                                </div>
-                              `
+        showScore.innerHTML += `
+            <div class='outer-score-div animate__backInDown'>
+                <div class='inner-Score-Div animate__backInDown'>
+                    <p>Your Score is : ${score}/${quizData.questionsArray.length}</p>
+                </div>
+            </div>
+            <button class="morebutton moreTemplates" data-text="Awesome">
+                <span class="actual-text">&nbsp;templates&nbsp;</span>
+                <span aria-hidden="true" class="hover-text">&nbsp;templates&nbsp;</span>
+            </button>`;
+        document.querySelector('.morebutton').addEventListener('click', function() {
+            navigate('/templates');
+        });
     });
 }

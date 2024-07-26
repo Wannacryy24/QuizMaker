@@ -115,8 +115,14 @@ export function check() {
         swal("Quiz heading cannot be empty.");
         return;
     }
+    if (questions.length === 0) {
+        swal("Please add a Question first.");
+        return;
+    }
 
     var isValid = true;
+    var hasDuplicates = false;
+
     questions.forEach(question => {
         var questionText = question.querySelector('.questionInput').value.trim();
         var options = question.querySelectorAll('.optionInput');
@@ -129,22 +135,46 @@ export function check() {
         }
 
         var optionsFilled = true;
+        var answers = [];
+
         options.forEach(option => {
-            if (!option.value.trim()) {
+            var optionValue = option.value.trim();
+            if (!optionValue) {
                 optionsFilled = false;
                 option.style.border = '1px solid red';
             } else {
                 option.style.border = '';
             }
+            answers.push(optionValue);
         });
 
         if (!optionsFilled) {
             isValid = false;
         }
+
+        for (let i = 0; i < answers.length; i++) {
+            for (let j = i + 1; j < answers.length; j++) {
+                if (answers[i] === answers[j]) {
+                    hasDuplicates = true;
+                    break;
+                }
+            }
+            if (hasDuplicates) {
+                break;
+            }
+        }
+
+        if (hasDuplicates) {
+            options.forEach(option => {
+                option.style.border = '1px solid red';
+            });
+        }
     });
 
     if (!isValid) {
         swal('All fields must be filled');
+    } else if (hasDuplicates) {
+        swal('Answers cannot be the same.');
     } else {
         saveToJsonObject();
     }

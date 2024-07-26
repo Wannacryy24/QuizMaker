@@ -270,8 +270,8 @@ header {
 
 .containerHeading{
   background: #ffffffce;
-  height: 10vw;
-  width: 10vw;
+  height: 15vw;
+  width: 15vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -288,6 +288,10 @@ header {
 
 .containerHeading:hover{
   transform: scale(1.2);
+}
+.animate__backInDown{
+  animation: ; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; 
 }
 
 .wrapperTitle{
@@ -424,6 +428,7 @@ header {
   display: flex;
   justify-content: center;
   width: 50%;
+  position: relative;
 }
 
 .outer-score-div{
@@ -448,10 +453,57 @@ border-radius: 50%;
   font-family: 'Times New Roman', Times, serif;
 }
 
-.animate__backInDown{
-  animation: ; /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 2s; 
+/* === removing default button style ===*/
+.morebutton {
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
 }
+
+/* button styling */
+.morebutton {
+  --border-right: 6px;
+  --text-stroke-color: rgba(0,0,0,0.6);
+  --animation-color: #37FF8B;
+  --fs-size: 1em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+/* this is the text, when you hover on button */
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px black;
+}
+/* hover */
+.morebutton:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color))
+}
+
+.moreTemplates{
+  position: absolute;
+  bottom: 2vh;
+}
+
+
+
 @media only screen and (max-width: 600px) {
 .login{
   display: none;
