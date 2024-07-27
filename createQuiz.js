@@ -1,8 +1,8 @@
 import { previewQuiz } from "./previewQuiz.js";
 import { navigate } from "./router.js";
+import { shareViaAPI } from "./share.js";
 export function createQuizClicked() {
     var renderLandingDiv = document.querySelector('.renderLandingDiv');
-    
     if(!renderLandingDiv){
         document.querySelector('#App').innerHTML = `<header>
             <div class="leftImageLogoDiv">
@@ -12,8 +12,8 @@ export function createQuizClicked() {
                 <ul>
                     <li class='home'>Home</li>
                     <li class='template'>Templates</li>
-                    <li class='defaultQuizes'>About</li>
-                    <li>Contact Us</li>
+                    <li class='share'>share</li>
+                    <li class='defaultQuizes'>Aboutz</li>
                 </ul>
             </div>
             <div class="rightHeaderDiv">
@@ -54,13 +54,13 @@ export function createQuizClicked() {
         check();
     });
 
-
     var newQuizBtn = document.getElementById('newQuizBtn');
     newQuizBtn.addEventListener('click', resetHtml);
 
 
     document.querySelector(".template").addEventListener("click", () => navigate('/templates'));
     document.querySelector(".home").addEventListener("click", () => navigate('/'));
+    document.querySelector(".share").addEventListener("click", () => shareViaAPI());
 }
 
 

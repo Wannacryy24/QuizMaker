@@ -1,6 +1,6 @@
 import { attemp } from "./attemp.js";
 import { navigate } from "./router.js";
-
+import { shareViaAPI } from "./share.js";
 
 export function showAllTemplates() {
     var savedQuizzes = JSON.parse(localStorage.getItem('savedQuizzes')) || [];
@@ -15,8 +15,8 @@ export function showAllTemplates() {
                 <ul>
                     <li class='home'>Home</li>
                     <li class='template'>Templates</li>
+                    <li class='share'>Share</li>
                     <li class='defaultQuizes'>About</li>
-                    <li>Contact Us</li>
                 </ul>
             </div>
             <div class="rightHeaderDiv">
@@ -43,7 +43,16 @@ export function showAllTemplates() {
 
     document.querySelector(".template").addEventListener("click", () => navigate('/templates'));
     document.querySelector(".home").addEventListener("click", () => navigate('/'));
+    document.querySelector('.leftImageLogoDiv').addEventListener('click',function(){
+        navigate('/');
+        console.log('hello');
+
+    });
+    document.querySelector('.share').addEventListener('click',()=>{
+        shareViaAPI();
+    });
 }
+
 
 function handleWrapperTitleClick(e) {
     if (e.target.closest('.deleteBtn')) {

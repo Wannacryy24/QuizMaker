@@ -198,3 +198,20 @@ export function interviewQuiz() {
     localStorage.setItem('savedQuizzes', JSON.stringify(previouslySavedQuizzes));
   }
 }
+
+
+
+async function newdatafromApi(){
+  try{
+    const response= await fetch(`https://opentdb.com/api.php?amount=10`);
+    const data = await response.json();
+    var booleanResult = data.results.filter(function(item){
+      return item.type===`boolean`
+    })
+    console.log(booleanResult);
+  }catch(error){
+    console.log(error);
+  }
+}
+
+// newdatafromApi();

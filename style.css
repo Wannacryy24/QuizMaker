@@ -8,11 +8,12 @@
 
 header {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  height: 10vh;
+  height: 13vh;
   padding: 0.5rem;
   display: flex;
   justify-content: space-between;
   width: 100%;
+
 }
 
 .leftImageLogoDiv {
@@ -79,7 +80,7 @@ header {
   color: #5d2057;
 }
 .renderLandingDiv {
-  background-color: #5f1757;
+  background-color: #5d2057;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -87,6 +88,7 @@ header {
   padding-bottom: 2rem;
   min-height: 91vh;
   height: auto;
+  padding: .5rem ;
 }
 
 .wrapperDetail {
@@ -98,6 +100,7 @@ header {
   margin-right: auto;
   gap: 3rem;
   height: auto;
+  flex-wrap: wrap;
 }
 
 .wrapperDetail h1 {
@@ -270,25 +273,70 @@ header {
 
 .containerHeading{
   background: #ffffffce;
+  background-color: #ececec;
   height: 15vw;
-  width: 15vw;
+  width: 18vw;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.2vw;
-  border-radius: 10%;
-  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  border-radius: 5%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   cursor: pointer;
-  font-family: "Kode Mono", monospace;
+  
   font-optical-sizing: auto;
   font-weight: 900;
   font-style: normal;
   position: relative;
 }
 
-.containerHeading:hover{
-  transform: scale(1.2);
+
+.containerHeading{
+  width: 200px;
+  height: 150px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }
+
+.containerHeading:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.containerHeading h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.containerHeading .deleteBtn {
+  align-self: flex-end;
+  cursor: pointer;
+  font-size: 16px;
+  color: #2e7439;
+  transition: color 0.2s;
+}
+
+.containerHeading .deleteBtn:hover {
+  color: #e60000;
+}
+
+/* .containerHeading:hover{
+  transform: scale(1.2);
+} */
 .animate__backInDown{
   animation: ; /* referring directly to the animation's @keyframe declaration */
   animation-duration: 2s; 
@@ -299,6 +347,7 @@ header {
   display: flex;
   justify-content: center;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .deleteBtn{

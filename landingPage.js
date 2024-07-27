@@ -1,4 +1,5 @@
 import { navigate } from './router.js';
+import { shareViaAPI } from './share.js';
 
 export function landingFrontPage() {
     const app = document.querySelector("#App");
@@ -11,8 +12,8 @@ export function landingFrontPage() {
                 <ul>
                     <li class='home'>Home</li>
                     <li class='template'>Templates</li>
+                    <li class='share'>Share</li>
                     <li class='defaultQuizes'>About</li>
-                    <li>Contact Us</li>
                 </ul>
             </div>
             <div class="rightHeaderDiv">
@@ -37,5 +38,11 @@ export function landingFrontPage() {
     document.querySelector(".template").addEventListener("click", () => navigate('/templates'));
     document.querySelector("#previewQuiz").addEventListener("click", () => navigate('/templates'));
     document.querySelector(".home").addEventListener("click", () => navigate('/'));
+    document.querySelector(".share").addEventListener("click", () => shareViaAPI());
+    
+    document.querySelector('.leftImageLogoDiv').addEventListener('click',function(){
+        navigate('/');
+        console.log('hello');
+    });
     
 }
