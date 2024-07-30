@@ -36,9 +36,9 @@ export function landingFrontPage() {
         <div>
             <span class='fs'>Other Projects</span>
             <ul class='footerUl'>
-                <li><a href='https://notesbymayankverma.netlify.app/' class='footeranchor'>Notes</a></li>
-                <li><a href='https://quizappbymayankverma.netlify.app/' class='footeranchor'>Quiz Player</a></li>
-                <li><a href='https://mayankvermaportfolioa.netlify.app/' class='footeranchor'>My Portfolio</a></li>
+                <li><a href='https://notesbymayankverma.netlify.app/' class='footeranchor' target='blank'>Notes</a></li>
+                <li><a href='https://quizappbymayankverma.netlify.app/' class='footeranchor' target='blank'>Quiz Player</a></li>
+                <li><a href='https://mayankvermaportfolioa.netlify.app/' class='footeranchor' target='blank'>My Portfolio</a></li>
             </ul>
         </div>
         <div>
