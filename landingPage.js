@@ -32,8 +32,33 @@ export function landingFrontPage() {
                 <p class='usedBy'><i class="fa-solid fa-check"></i>Can be used by people around the world.</p>
             </div>
         </div>
+        <footer>
+        <div>
+            <span class='fs'>Other Projects</span>
+            <ul class='footerUl'>
+                <li>Notes</li>
+                <li>Quiz Player</li>
+                <li>My Portfolio</li>
+            </ul>
+        </div>
+        <div>
+            <span class='fs'>Navigation</span>
+            <ul class='footerUl'>
+                <li>Preview</li>
+                <li>Create</li>
+                <li>Share</li>
+            </ul>
+        </div>
+        <div>
+            <span class='fs'>Help and Support</span>
+            <ul class='footerUl'>
+                <li>Help and Support</li>
+                <li>Terms and security</li>
+                <li>Email us</li>
+            </ul>
+        </div>
+        </footer>
     `;
-
     document.querySelector(".createBtn").addEventListener("click", () => navigate('/create'));
     document.querySelector(".template").addEventListener("click", () => navigate('/templates'));
     document.querySelector("#previewQuiz").addEventListener("click", () => navigate('/templates'));

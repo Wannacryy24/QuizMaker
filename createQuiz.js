@@ -13,7 +13,7 @@ export function createQuizClicked() {
                     <li class='home'>Home</li>
                     <li class='template'>Templates</li>
                     <li class='share'>share</li>
-                    <li class='defaultQuizes'>Aboutz</li>
+                    <li class='defaultQuizes'>About</li>
                 </ul>
             </div>
             <div class="rightHeaderDiv">

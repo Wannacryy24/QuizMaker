@@ -86,8 +86,8 @@ export function previewQuiz(ind) {
                 <ul>
                     <li class='home'>Home</li>
                     <li class='template'>Templates</li>
+                    <li class='share'>Share</li>
                     <li class='defaultQuizes'>About</li>
-                    <li>Contact Us</li>
                 </ul>
             </div>
             <div class="rightHeaderDiv">
@@ -104,7 +104,7 @@ export function previewQuiz(ind) {
         </div></div>
         
     `;
-
+    document.querySelector(".share").addEventListener("click", () => shareViaAPI());
     lastQuiz.questionsArray.forEach(function(question, index) {
         var questionHTML = `
             <div class='QuestionInputDiv'>
