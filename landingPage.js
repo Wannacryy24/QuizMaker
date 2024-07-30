@@ -36,17 +36,17 @@ export function landingFrontPage() {
         <div>
             <span class='fs'>Other Projects</span>
             <ul class='footerUl'>
-                <li>Notes</li>
-                <li>Quiz Player</li>
-                <li>My Portfolio</li>
+                <li><a href='https://notesbymayankverma.netlify.app/' class='footeranchor'>Notes</a></li>
+                <li><a href='https://quizappbymayankverma.netlify.app/' class='footeranchor'>Quiz Player</a></li>
+                <li><a href='https://mayankvermaportfolioa.netlify.app/' class='footeranchor'>My Portfolio</a></li>
             </ul>
         </div>
         <div>
             <span class='fs'>Navigation</span>
             <ul class='footerUl'>
-                <li>Preview</li>
-                <li>Create</li>
-                <li>Share</li>
+                <li class='templateli'>Preview</li>
+                <li class='createBtnli'>Create</li>
+                <li class='shareli'>Share</li>
             </ul>
         </div>
         <div>
@@ -64,10 +64,12 @@ export function landingFrontPage() {
     document.querySelector("#previewQuiz").addEventListener("click", () => navigate('/templates'));
     document.querySelector(".home").addEventListener("click", () => navigate('/'));
     document.querySelector(".share").addEventListener("click", () => shareViaAPI());
-    
     document.querySelector('.leftImageLogoDiv').addEventListener('click',function(){
         navigate('/');
         console.log('hello');
     });
     
+    document.querySelector(".createBtnli").addEventListener("click", () => navigate('/create'));
+    document.querySelector(".templateli").addEventListener("click", () => navigate('/templates'));
+    document.querySelector(".shareli").addEventListener("click", () => shareViaAPI());
 }
